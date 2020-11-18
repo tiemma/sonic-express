@@ -1,0 +1,218 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Demo server",
+        "description": "Random description on API related stuff"
+    },
+    "servers": [
+        {
+            "url": "/api/v1",
+            "description": "Host system path"
+        }
+    ],
+    "paths": {
+        "/animal/{man}/dog": {
+            "get": {
+                "parameters": [
+                    {
+                        "name": "man",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/definitions/mti2pk"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/mouse/{id}/man": {
+            "post": {
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/definitions/zxg65"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/definitions/ln6srb"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/{mouse}/cat": {
+            "get": {
+                "parameters": [
+                    {
+                        "name": "mouse",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "text/html": {
+                                "schema": {
+                                    "$ref": "#/definitions/5njmeq"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/man": {
+            "get": {
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/definitions/02wt48"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/animal": {
+            "get": {
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/definitions/8x3yho"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {}
+    },
+    "tags": [],
+    "definitions": {
+        "mti2pk": {
+            "required": [
+                "man"
+            ],
+            "properties": {
+                "man": {
+                    "type": "string",
+                    "example": "dave"
+                }
+            }
+        },
+        "zxg65": {
+            "required": [
+                "state"
+            ],
+            "properties": {
+                "state": {
+                    "type": "string",
+                    "example": "fluffy"
+                }
+            }
+        },
+        "ln6srb": {
+            "required": [
+                "id",
+                "body"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "example": "jerry"
+                },
+                "body": {
+                    "required": [
+                        "state"
+                    ],
+                    "properties": {
+                        "state": {
+                            "type": "string",
+                            "example": "fluffy"
+                        }
+                    },
+                    "type": "object"
+                }
+            }
+        },
+        "5njmeq": {
+            "type": "string",
+            "example": "jerry"
+        },
+        "02wt48": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "His name is Dave"
+                    }
+                }
+            },
+            "example": [
+                {
+                    "name": "His name is Dave"
+                }
+            ]
+        },
+        "8x3yho": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "cat"
+                    }
+                }
+            },
+            "example": [
+                {
+                    "name": "cat"
+                },
+                {
+                    "name": "mouse"
+                },
+                {
+                    "name": "dog"
+                }
+            ]
+        }
+    }
+}

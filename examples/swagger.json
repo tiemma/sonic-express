@@ -1,0 +1,292 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Demo server",
+        "description": "Random description on API related stuff"
+    },
+    "servers": [
+        {
+            "url": "/api/v1",
+            "description": "Host system path"
+        }
+    ],
+    "paths": {
+        "/animal/{man}/dog": {
+            "get": {
+                "name": "dog",
+                "description": "Endpoint for dog under a particular man",
+                "tags": [
+                    "Dog"
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/definitions/c0j5ni"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Token not provided"
+                    },
+                    "500": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/definitions/dogError500"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "man",
+                        "in": "path",
+                        "defaultTemplate": "$man[0].id",
+                        "required": true
+                    },
+                    {
+                        "name": "man",
+                        "in": "path",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        "/{mouse}/cat": {
+            "get": {
+                "name": "cat",
+                "summary": "Get mouse",
+                "tags": [
+                    "mouse"
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "text/html": {
+                                "schema": {
+                                    "$ref": "#/definitions/uiv11"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Token not provided"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "mouse",
+                        "in": "path",
+                        "description": "ID",
+                        "defaultTemplate": "$mouse.id",
+                        "required": true
+                    },
+                    {
+                        "name": "mouse",
+                        "in": "path",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        "/mouse/{id}/man": {
+            "post": {
+                "name": "mouse",
+                "summary": "Create mouse",
+                "description": "Creates a mouse under a man's house, rhymes with the times dudes",
+                "tags": [
+                    "mouse"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/definitions/ov6ep"
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "man ID",
+                        "required": true,
+                        "defaultTemplate": "$man[0].id",
+                        "schema": {
+                            "$ref": "#/definitions/pathID"
+                        }
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/definitions/n6be09"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/man": {
+            "get": {
+                "name": "man",
+                "description": "For all men shall find their path in life",
+                "tags": [
+                    "man"
+                ],
+                "produces": "application/json",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/definitions/mg899d"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Token not provided"
+                    }
+                },
+                "parameters": []
+            }
+        },
+        "/animal": {
+            "get": {
+                "name": "animals",
+                "summary": "Get animals",
+                "tags": [
+                    "Animals"
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/definitions/iqaugr"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Missing parameter in request body"
+                    },
+                    "401": {
+                        "description": "Token not provided"
+                    }
+                },
+                "parameters": []
+            }
+        }
+    },
+    "components": {
+        "schemas": {}
+    },
+    "tags": [],
+    "definitions": {
+        "c0j5ni": {
+            "required": [
+                "man"
+            ],
+            "properties": {
+                "man": {
+                    "type": "string",
+                    "example": "dave"
+                }
+            }
+        },
+        "ov6ep": {
+            "required": [
+                "state"
+            ],
+            "properties": {
+                "state": {
+                    "type": "string",
+                    "example": "fluffy"
+                }
+            }
+        },
+        "n6be09": {
+            "required": [
+                "id",
+                "body"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "example": "jerry"
+                },
+                "body": {
+                    "required": [
+                        "state"
+                    ],
+                    "properties": {
+                        "state": {
+                            "type": "string",
+                            "example": "fluffy"
+                        }
+                    },
+                    "type": "object"
+                }
+            }
+        },
+        "uiv11": {
+            "type": "string",
+            "example": "jerry"
+        },
+        "mg899d": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "His name is Dave"
+                    }
+                }
+            },
+            "example": [
+                {
+                    "name": "His name is Dave"
+                }
+            ]
+        },
+        "iqaugr": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "cat"
+                    }
+                }
+            },
+            "example": [
+                {
+                    "name": "cat"
+                },
+                {
+                    "name": "mouse"
+                },
+                {
+                    "name": "dog"
+                }
+            ]
+        }
+    }
+}
