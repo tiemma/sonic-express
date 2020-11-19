@@ -4,6 +4,9 @@
 
 Accelerate your swagger doc experience on Express.
 
+![CodeQL](https://github.com/Tiemma/sonic-express/workflows/CodeQL/badge.svg)
+![Node.js CI](https://github.com/Tiemma/sonic-express/workflows/Node.js%20CI/badge.svg)
+
 # What does this do?
 This hooks into the Express `res` and `req` API and auto-documents each response for you so you never have to.
 
