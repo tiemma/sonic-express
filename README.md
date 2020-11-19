@@ -11,9 +11,16 @@ Imagine writing 100 APIs and having it entirely documented, that's what this hel
 
 # How to use it
 
+- Install the package
 - Import the middleware
 - Pass in the options
 - Sit back and call your APIs
+
+## Install the package
+To install the package, run
+```bash
+npm install --save @tiemma/sonic-express
+```
 
 ## Import the middleware
 The middleware for this project is currently exposed for only Express.
