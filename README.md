@@ -53,7 +53,7 @@ So all URLs containing `/api/v1` will be logged, `/api/v2` entries will not.
 To enable for other URL prefixes, add the entry to the `servers` block and they will be automatically logged.
 
 # Why did I do this?
-I work at [Replex](https://replex.io) (shameless plug here) and I got tired of tickets to update the swagger documentation which isn't easy or also extremely fun to do.
+I got tired of tickets to update the swagger documentation which isn't easy or also extremely fun to do.
 
 So whilst creating a simple handler to record the requests, I started this project.
 
