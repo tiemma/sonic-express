@@ -23,7 +23,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/definitions/nv8fpg"
+                                    "$ref": "#/definitions/v8vp8"
                                 }
                             }
                         }
@@ -68,7 +68,7 @@
                         "content": {
                             "text/html": {
                                 "schema": {
-                                    "$ref": "#/definitions/i9n4rc"
+                                    "$ref": "#/definitions/hvkda"
                                 }
                             }
                         }
@@ -105,7 +105,7 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/definitions/1g1s3h"
+                                "$ref": "#/definitions/r19zqe"
                             }
                         }
                     }
@@ -132,7 +132,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/definitions/v85aes"
+                                    "$ref": "#/definitions/0is01"
                                 }
                             }
                         }
@@ -153,7 +153,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/definitions/y0ms3"
+                                    "$ref": "#/definitions/qkimr"
                                 }
                             }
                         }
@@ -177,7 +177,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/definitions/ieo2qq"
+                                    "$ref": "#/definitions/2v3gkn"
                                 }
                             }
                         }
@@ -198,7 +198,7 @@
     },
     "tags": [],
     "definitions": {
-        "nv8fpg": {
+        "v8vp8": {
             "required": [
                 "man"
             ],
@@ -209,7 +209,7 @@
                 }
             }
         },
-        "1g1s3h": {
+        "r19zqe": {
             "required": [
                 "state"
             ],
@@ -220,7 +220,7 @@
                 }
             }
         },
-        "v85aes": {
+        "0is01": {
             "required": [
                 "id",
                 "body"
@@ -244,11 +244,11 @@
                 }
             }
         },
-        "i9n4rc": {
+        "hvkda": {
             "type": "string",
             "example": "jerry"
         },
-        "y0ms3": {
+        "qkimr": {
             "type": "array",
             "items": {
                 "type": "object",
@@ -265,7 +265,7 @@
                 }
             ]
         },
-        "ieo2qq": {
+        "2v3gkn": {
             "type": "array",
             "items": {
                 "type": "object",
