@@ -67,7 +67,7 @@ if(process.env.NODE_ENV === 'testing') {
 ```
 
 2. You can still add docs for your APIs
-The middleware will adequately handle generating the swagger docs for undocumented routes.
+- The middleware will adequately handle generating the swagger docs for undocumented routes.
 By undocumented routes, I mean routes without these fancy JSDoc comments
 ```javascript
 /**

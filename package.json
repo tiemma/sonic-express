@@ -4,7 +4,7 @@
   "description": "Accelerate your swagger doc experience on an express backend",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint -c .eslintrc.json --fix --ext .ts --ext .js src/ test/",
+    "lint": "eslint -c .eslintrc.json --fix --ext .ts --ext .js ./ test/ examples/",
     "test": "NODE_ENV=testing nyc --reporter=text-summary mocha -r ts-node/register test/*.spec.ts"
   },
   "keywords": [
@@ -16,11 +16,13 @@
   "author": "Emmanuel Bakare",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "@tiemma/sonic-core": "^1.0.3",
     "@types/chai": "^4.2.14",
     "@types/mocha": "^8.0.4",
     "@types/supertest": "^2.0.10",
-    "swagger-jsdoc": "^5.0.1"
+    "swagger-jsdoc": "^5.0.1",
+    "swagger-ui-express": "^4.1.4"
   },
   "devDependencies": {
     "@types/swagger-ui-express": "^4.1.2",
@@ -30,12 +32,10 @@
     "eslint": "^7.13.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
-    "express": "^4.17.1",
     "husky": "^4.3.0",
     "mocha": "^8.2.1",
     "nyc": "^15.1.0",
     "supertest": "^6.0.1",
-    "swagger-ui-express": "^4.1.4",
     "ts-node": "^9.0.0",
     "tslib": "^2.0.3",
     "typescript": "^4.0.5"

@@ -157,6 +157,7 @@ app.use(
 
 if (process.env.NODE_ENV !== 'testing') {
   app.listen(3200, () => {
+    // eslint-disable-next-line no-console
     console.info(`Express server started on port: ${3200}`);
   });
 }
