@@ -16,7 +16,7 @@
   "author": "Emmanuel Bakare",
   "license": "ISC",
   "dependencies": {
-    "@tiemma/sonic-core": "^1.0.5",
+    "@tiemma/sonic-core": "^1.0.6",
     "express": "^4.17.1",
     "swagger-jsdoc": "^5.0.1",
     "swagger-ui-express": "^4.1.4"
