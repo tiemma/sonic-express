@@ -1,6 +1,6 @@
 {
   "name": "@tiemma/sonic-express",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Accelerate your swagger doc experience on an express backend",
   "main": "index.js",
   "scripts": {
