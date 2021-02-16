@@ -15,6 +15,8 @@ const {
 const logger = debugLogger(__filename);
 const parameterRegex = /(:\w+\??)/g;
 
+const normalizePath = (path) => (path[path.length - 1] === '/' ? path.substr(0, path.length - 1) : path);
+
 const getResponseExpress = (app, swaggerOptions, swaggerFilePath) => {
   // Set state of swaggerSpec on first request
   // Update and write in-memory spec to file
@@ -48,7 +50,7 @@ const getResponseExpress = (app, swaggerOptions, swaggerFilePath) => {
         const { statusCode } = res;
         writeAsSwaggerDocToFile(swaggerSpec,
           method.toLowerCase(),
-          originalRoute,
+          normalizePath(originalRoute),
           parameterRegex,
           responseBody,
           requestBody,
